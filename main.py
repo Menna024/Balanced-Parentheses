@@ -34,16 +34,11 @@ def isBalanced(expression):
     else:
         return "NO"                
 
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
-
-    t = int(input().strip())
-
-    for t_itr in range(t):
-        expression = input()
-
-        res = isBalanced(expression)
-
-        fptr.write(res + '\n')
-
-    fptr.close()
+string = "{[]{()}}"
+print(string,"-", isBalanced(string))
+ 
+string = "[{}{})(]"
+print(string,"-", isBalanced(string))
+ 
+string = "((()"
+print(string,"-",isBalanced(string))
